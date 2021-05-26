@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  div.wrapper
+    each item,index in data 
+      .product
+        .title=item.title
+        .img-product
+          img(src=item.pictures.picture1)
+        .button-panel
+          if item.discount>0
+            p.text.line-trough #{item.price} zł 
+            p.text #{item.price-item.discount} zł
+          else 
+            p.text #{item.price} zł 
+          form(action="/item/"+(item.itemNumber)+"/add" method="POST")
+            
+            select(name='size')
+              each val in [0,1,2,3,4,5,6,7,8,9,10]
+                
+                  option(value=val+35) #{val+35}
+                  form(action='/id')
+            button(type='sumbit' ) KUP
+
+
+            
+        p=item.description
+    

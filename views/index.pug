@@ -1,0 +1,65 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Luba&nacute; Sneaker Store - sklep obuwniczy
+  link(rel='apple-touch-icon' sizes='180x180' ,href='./images/favicons/apple-touch-icon.png')
+  link(rel='icon' type='image/png' sizes='32x32' ,href='./images/favicons/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='16x16' ,href='./images/favicons/favicon-16x16.png')
+  link(rel='manifest' ,href='./images/favicons/site.webmanifest')
+  link(rel='stylesheet' ,href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+  link(rel='preconnect' ,href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&family=Oswald:wght@300;400;700&display=swap' rel='stylesheet')
+  link(rel='preconnect' ,href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet')
+  link(rel='preconnect' ,href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet')
+  link(rel='stylesheet' ,href='https://unpkg.com/swiper/swiper-bundle.min.css')
+  link(rel='stylesheet' ,href='/styles/css/style.css')
+.wrapper
+  include ./includes/header.pug
+  .swiper-container.mySwiper
+    .swiper-wrapper
+      .swiper-slide
+        a(href='#')
+          picture
+            source(media='(min-width: 768px)' srcset='../images/slider/adidas-stan-smith-desktop.jpg')
+            img(src='../images/slider/adidas-stan-smith-mobile.jpg' alt='Adidas Stan Smith' title='Adidas Stan Smith')
+      .swiper-slide
+        a(href='#')
+          picture
+            source(media='(min-width: 768px)' srcset='../images/slider/adidasxlego-desktop.jpg')
+            img(src='../images/slider/adidasxlego-mobile.jpg' alt='Adidas x Lego' title='Adidas x Lego')
+      .swiper-slide
+        a(href='#')
+          picture
+            source(media='(min-width: 768px)' srcset='../images/slider/nike-air-force-desktop.jpg')
+            img(src='../images/slider/nike-air-force1-mobile.jpg' alt="Nike Air Force 1 Low 07 'Duck Camo'" title="Nike Air Force 1 Low 07 'Duck Camo'")
+    .swiper-pagination
+  section.main-content
+    a(href='/najnowsze-damskie')
+      .main-content__categories.women-bg
+        h1.main-content__name najnowsze damskie
+    a(href='/najnowsze-meskie')
+      .main-content__categories.men-bg
+        h1.main-content__name najnowsze m&eogon;skie
+    a(href='/najnowsze-dzieciece')
+      .main-content__categories.kids-bg
+        h1.main-content__name najnowsze dzieci&eogon;ce
+  include ./includes/footer.pug
+script(src='https://unpkg.com/swiper/swiper-bundle.min.js')
+script.
+  var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 0,
+  centeredSlides: true,
+  autoplay: {
+  delay: 2500,
+  disableOnInteraction: false,
+  },
+  pagination: {
+  el: ".swiper-pagination",
+  clickable: true,
+  },
+  });
+script(src='../scripts/app.js')

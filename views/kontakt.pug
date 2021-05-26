@@ -1,0 +1,46 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Luba&nacute; Sneaker Store - sklep obuwniczy
+  link(rel='apple-touch-icon' sizes='180x180' href='./images/favicons/apple-touch-icon.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='./images/favicons/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='./images/favicons/favicon-16x16.png')
+  link(rel='manifest' href='./images/favicons/site.webmanifest')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&family=Oswald:wght@300;400;700&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css')
+  link(rel='stylesheet' href='/styles/css/style.css')
+.wrapper
+  include includes/header.pug
+  section.contact
+    section.contact__info
+      .contact__link
+        h1 Kontakt
+        a(href='mailto: kontakt@lubansneakerstore.pl')
+          i.fas.fa-envelope
+          |                     kontakt@lubansneakerstore.pl
+      .contact__link
+        a(href='tel:696968503')
+          i.fas.fa-phone
+          |                     +48 696 968 503
+      .contact__link
+        p Godziny pracy:
+        p pon - pt: 8:00 - 18:00
+        p sob - ndz: 10:00 - 15:00
+    section.contact__form
+      h1 Masz pytanie?
+      h1 Skontaktuj si&eogon; z nami
+      form(action='/')
+        input(type='text' placeholder='Imię i Nazwisko' required='')
+        input(type='email' placeholder='Adres e-mail' required='')
+        textarea#message(name='message' cols='35' rows='10' placeholder='Twoja wiadomość' required='')
+        button(type='submit') Wy&sacute;lij
+  include includes/footer.pug
+script(src='../scripts/app.js')

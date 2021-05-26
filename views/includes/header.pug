@@ -1,0 +1,49 @@
+header.header
+  .burger
+    span.line1
+    span.line2
+    span.line3
+  .hero-holder
+    a(href='index.html')
+      img.hero-holder__hero(src='./images/logo.png' alt='Logo')
+  nav.menu
+    ul.menu__list
+      li.menu__item
+        a.menu__link(href='/nowosci') nowo&sacute;ci
+      li.menu__item
+        a.menu__link(href='/kobiety') kobiety
+      li.menu__item
+        a.menu__link(href='/mezczyzni') m&eogon;&zdot;czy&zacute;ni
+      li.menu__item
+        a.menu__link(href='/dzieci') dzieci
+      li.menu__item.brands
+        a.menu__link.brands-link
+          | marki 
+          i.fas.fa-angle-down
+        ul.menu__list
+          li.menu__item.menu__item--small-pd
+            a.menu__link.menu__link--small(href='/adidas') Adidas
+          li.menu__item.menu__item--small-pd
+            a.menu__link.menu__link--small(href='/new-balance') New Balance
+          li.menu__item.menu__item--small-pd
+            a.menu__link.menu__link--small(href='/nike') Nike
+          li.menu__item.menu__item--small-pd
+            a.menu__link.menu__link--small(href='/reebok') Reebok
+          li.menu__item.menu__item--small-pd
+            a.menu__link.menu__link--small(href='/vans') Vans
+  .utility-section
+    .utility-section__link
+      form.utility-section__search(action='')
+        i.fas.fa-arrow-left
+        input#search.searchbar(type='search' name='search' placeholder='Szukaj')
+        button.btn-search(type='submit')
+          i.fas.fa-search
+      i.fas.fa-search
+    .utility-section__link
+      a(href='/logowanie')
+        i.fas.fa-user
+        p.utility-section__description Zaloguj
+    .utility-section__link
+      a(href='/koszyk')
+        i.fas.fa-shopping-cart
+        p.utility-section__description Koszyk

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  div.wrapper
+    each item,index in data 
+      a(href="/item/"+(item.itemNumber))
+        .product
+          .title=item.title
+          .img-product
+            img(src=item.pictures.picture1)
+          .button-panel
+            if item.discount>0
+              p.text.line-trough #{item.price} zł 
+              p.text #{item.price-item.discount} zł
+            else 
+              p.text #{item.price} zł 
+  nav.pages 
+    each val in [1,2,3,4]
+      a.page(href="/men/" + val) #{val}

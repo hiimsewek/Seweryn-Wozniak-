@@ -1,0 +1,160 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Luba&nacute; Sneaker Store - sklep obuwniczy
+  link(rel='apple-touch-icon' sizes='180x180' href='./images/favicons/apple-touch-icon.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='./images/favicons/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='./images/favicons/favicon-16x16.png')
+  link(rel='manifest' href='./images/favicons/site.webmanifest')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&family=Oswald:wght@300;400;700&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css')
+  link(rel='stylesheet' href='/styles/css/style.css')
+.wrapper
+  include includes/header.pug
+  section.info
+    h1(style='text-align:center') Polityka Cookies
+    p
+      | Poni&zdot;sza Polityka Cookies okre&sacute;la zasady zapisywania i uzyskiwania dost&eogon;pu do danych na Urz&aogon;dzeniach U&zdot;ytkownik&oacute;w korzystaj&aogon;cych z Serwisu do cel&oacute;w &sacute;wiadczenia us&lstrok;ug drog&aogon; elektroniczn&aogon; przez Administratora Serwisu.
+    h2(style='text-align:center') &sect; 1 Definicje
+    ul
+      li
+        p
+          strong Serwis
+          |  - serwis internetowy dzia&lstrok;aj&aogon;cy pod adresem 
+          span#serwis
+            span www.lubansneakerstore.pl
+      li
+        p
+          strong Serwis zewn&eogon;trzny
+          |  - serwis internetowe partner&oacute;w, us&lstrok;ugodawc&oacute;w lub us&lstrok;ugobiorc&oacute;w Administratora
+      li
+        p
+          strong Administrator
+          |  - firma 
+          span#firma
+            span Luban Sneaker Store
+            | , prowadz&aogon;ca dzia&lstrok;alno&sacute;&cacute; pod adresem: 
+            span .
+            | , o nadanym numerze identyfikacji podatkowej (NIP): 
+            span 123123123
+          | , &sacute;wiadcz&aogon;ca us&lstrok;ugi drog&aogon; elektroniczn&aogon; za po&sacute;rednictwem Serwisu oraz przechowuj&aogon;ca i uzyskuj&aogon;ca dost&eogon;p do informacji w urz&aogon;dzeniach U&zdot;ytkownika
+      li
+        p
+          strong U&zdot;ytkownik
+          |  - osba fizyczna, dla kt&oacute;rej Administrator &sacute;wiadczy us&lstrok;ugi drog&aogon; elektroniczna za po&sacute;rednictwem Serwisu.
+      li
+        p
+          strong Urz&aogon;dzenie
+          |  - elektroniczne urz&aogon;dzenie wraz z oprogramowaniem, za po&sacute;rednictwem, kt&oacute;rego U&zdot;ytkownik uzyskuje dost&eogon;p do Serwisu
+      li
+        p
+          strong Cookies (ciasteczka)
+          |  - dane tekstowe gromadzone w formie plik&oacute;w zamieszczanych na Urz&aogon;dzeniu U&zdot;ytkownika
+    h2(style='text-align:center') &sect; 2 Rodzaje Cookies
+    ul
+      li
+        p
+          strong Cookies wewn&eogon;trzne
+          |  - pliki zamieszczane i odczytywane z Urz&aogon;dzenia U&zdot;ytkownika przes system teleinformatyczny Serwisu
+      li
+        p
+          strong Cookies zewn&eogon;trzne
+          |  - pliki zamieszczane i odczytywane z Urz&aogon;dzenia U&zdot;ytkownika przez systemy teleinformatyczne Serwis&oacute;w zewn&eogon;trznych
+      li
+        p
+          strong Cookies sesyjne
+          |  - pliki zamieszczane i odczytywane z Urz&aogon;dzenia U&zdot;ytkownika przez Serwis 
+          span#sz1(style='display: none;') lub Serwisy zewn&eogon;trzne
+          |  podczas jednej sesji danego Urz&aogon;dzenia. Po zako&nacute;czeniu sesji pliki s&aogon; usuwane z Urz&aogon;dzenia U&zdot;ytkownika.
+      li
+        p
+          strong Cookies trwa&lstrok;e
+          |  - pliki zamieszczane i odczytywane z Urz&aogon;dzenia U&zdot;ytkownika przez Serwis 
+          span#sz2(style='display: none;') lub Serwisy zewn&eogon;trzne
+          |  do momentu ich r&eogon;cznego usuni&eogon;cia. Pliki nie s&aogon; usuwane automatycznie po zako&nacute;czeniu sesji Urz&aogon;dzenia chyba &zdot;e konfiguracja Urz&aogon;dzenia U&zdot;ytkownika jest ustawiona na tryb usuwanie plik&oacute;w Cookie po zako&nacute;czeniu sesji Urz&aogon;dzenia.
+    h2(style='text-align:center') &sect; 3 Bezpiecze&nacute;stwo
+    ul
+      li
+        p
+          strong Mechanizmy sk&lstrok;adowania i odczytu
+          |  - Mechanizmy sk&lstrok;adowania i odczytu Cookies nie pozwalaj&aogon; na pobierania jakichkolwiek danych osobowych ani &zdot;adnych informacji poufnych z Urz&aogon;dzenia U&zdot;ytkownika. Przeniesienie na Urz&aogon;dzenie U&zdot;ytkownika wirus&oacute;w, koni troja&nacute;skich oraz innych robak&oacute;w jest praktynie niemo&zdot;liwe.
+      li
+        p
+          strong Cookie wewn&eogon;trzne
+          |  - zastosowane przez Administratora Cookie wewn&eogon;trzne s&aogon; bezpieczne dla Urz&aogon;dze&nacute; U&zdot;ytkownik&oacute;w
+      li
+        p
+          strong Cookie zewn&eogon;trzne
+          |  - za bezpiecze&nacute;stwo plik&oacute;w Cookie pochodz&aogon;cych od partner&oacute;w Serwisu Administrator nie ponosi odpowiedzialno&sacute;ci. Lista partner&oacute;w zamieszczona jest w dalszej cz&eogon;&sacute;ci Polityki Cookie.
+    h2(style='text-align:center') &sect; 4 Cele do kt&oacute;rych wykorzystywane s&aogon; pliki Cookie
+    ul#cele
+      li
+        p
+          strong
+            span Usprawnienie i u&lstrok;atwienie dost&eogon;pu do Serwisu
+          |  - Administrator mo&zdot;e przechowywa&cacute; w plikach Cookie informacje o prefernecjach i ustawieniach u&zdot;ytkownika dotycz&aogon;cych Serwisu aby usprawni&cacute;, polepszy&cacute; i przy&sacute;pieszy&cacute; &sacute;wiadczenie us&lstrok;ug w ramach Serwisu.
+      li
+        p
+          strong
+            span Logowanie
+          |  - Administrator wykorzystuje pliki Cookie do cel&oacute;w logowania U&zdot;ytkownik&oacute;w w Serwisie
+    h2(style='text-align:center') &sect; 5 Serwisy zewn&eogon;trzne
+    p#zewinfo
+      span
+        | Administrator nie wsp&oacute;&lstrok;pracuje z serwisami zewn&eogon;trznymi i Serwis nie umieszcza ani nie korzysta z &zdot;adnych plik&oacute;w zewn&eogon;trznych plik&oacute;w Cookie.
+    ul#zewnetrzne
+    h2(style='text-align:center')
+      | &sect; 6 Mo&zdot;liwo&sacute;ci okre&sacute;lania warunk&oacute;w przechowywania i uzyskiwania dost&eogon;pu na Urz&aogon;dzeniach U&zdot;ytkownika przez Serwis
+      span#sz6(style='display: none;')  i Serwisy zewn&eogon;trzne
+    ul
+      li
+        p
+          | U&zdot;ytkownik mo&zdot;e w dowolnym momencie, samodzielnie zmieni&cacute; ustawienia dotycz&aogon;ce zapisywania, usuwania oraz dost&eogon;pu do danych zapisanych plik&oacute;w Cookies
+      li
+        p
+          | Informacje o sposobie wy&lstrok;&aogon;czenia plik&oacute;w Cookie w najpopularniejszych przegl&aogon;darkach komputerowych i urz&aogon;dze&nacute; mobilnych dost&eogon;pna s&aogon; na stronie: 
+          a(href='http://jakwylaczyccookie.pl') jak wy&lstrok;&aogon;czy&cacute; cookie
+          | .
+      li
+        p
+          | U&zdot;ytkownik mo&zdot;e w dowolnym momencie usun&aogon;&cacute; wszelkie zapisane do tej pory pliki Cookie korzystaj&aogon;c z narz&eogon;dzi Urz&aogon;dzenia U&zdot;ytkownika za po&sacute;rednictwem kt&oacute;rego U&zdot;ytkowanik korzysta z us&lstrok;ug Serwisu.
+    h2(style='text-align:center') &sect; 7 Wy&lstrok;&aogon;czenie odpowiedzialno&sacute;ci
+    ul
+      li
+        | Administrator stosuje wszelkie mo&zdot;liwe &sacute;rodki w celu zapewnienia bezpiecze&nacute;stwa danych umieszczanych w plikach Cookie. Nale&zdot;y jednak zwr&oacute;ci&cacute; uwag&eogon;, &zdot;e zapewnienie bezpiecze&nacute;stwa tych danych zale&zdot;y od obu stron, w tym dzia&lstrok;alno&sacute;ci U&zdot;ytkownika oraz satnu zabezpiecze&nacute; urz&aogon;dzenia z kt&oacute;rego korzysta.
+      li
+        | Administrator nie bierze odpowiedzialno&sacute;ci za przechwycenie danych zawartych w plikach Cookie, podszycie si&eogon; pod sesj&eogon; U&zdot;ytkownika lub ich usuni&eogon;cie, na skutek &sacute;wiadomej lub nie&sacute;wiadomej dzia&lstrok;alno&sacute;&cacute; U&zdot;ytkownika, wirus&oacute;w, koni troja&nacute;skich i innego oprogramowania szpieguj&aogon;cego, kt&oacute;rymi mo&zdot;e by&cacute; zainfekowane Urz&aogon;dzenie U&zdot;ytkownika.
+      li
+        | U&zdot;ytkownicy w celu zabezpieczenia si&eogon; przed wskazanymi w punkcie poprzednim zagro&zdot;eniami powinni stosowa&cacute; si&eogon; do 
+        span#cyber_random
+          a(href='https://nety.pl/cyberbezpieczenstwo/') zasad cyberbezpiecze&nacute;stwa w sieci internet
+        | .
+      li
+        | Us&lstrok;ugi &sacute;wiadczone przez podmioty trzecie s&aogon; poza kontrol&aogon; Administratora. Podmioty te mog&aogon; w ka&zdot;dej chwili zmieni&cacute; swoje warunki &sacute;wiadczenia us&lstrok;ug, cel oraz wykorzystanie plik&oacute;w cookie. Administrator nie odpowiada na tyle na ile pozwala na to prawo za dzia&lstrok;anie plik&oacute;w cookies u&zdot;ywanych przez serwisy partnerskie. U&zdot;ytkownicy w ka&zdot;dej chwili mog&aogon; samodzielnie zarz&aogon;dza&cacute; zezwoleniami i ustawieniami plik&oacute;w cookie dla ka&zdot;edej dowolnej witryny.
+    h2(style='text-align:center') &sect; 8 Wymagania Serwisu
+    ul
+      li
+        p
+          | Ograniczenie zapisu i dost&eogon;pu do plik&oacute;w Cookie na Urz&aogon;dzeniu U&zdot;ytkownika mo&zdot;e spowodowa&cacute; nieprawid&lstrok;owe dzia&lstrok;anie niekt&oacute;rych funkcji Serwisu.
+      li
+        p
+          | Administrator nie ponosi &zdot;adnej odpowiedzialno&sacute;ci za nieprawid&lstrok;owo dzia&lstrok;aj&aogon;ce funkcje Serwisu w przypadku gdy U&zdot;ytkownik ograniczy w jakikolwiek spos&oacute;b mo&zdot;liwo&sacute;&cacute; zapisywania i odczytu plik&oacute;w Cookie.
+    h2(style='text-align:center') &sect; 9 Zmiany w Polityce Cookie
+    ul
+      li
+        p
+          | Administrator zastrzega sobie prawo do dowolnej zmiany niniejszej Polityki Cookie bez konieczno&sacute;ci informowania o tym u&zdot;ytkownik&oacute;w.
+      li
+        p Wprowadzone zmiany w Polityce Cookie zawsze b&eogon;d&aogon; publikowane na tej stronie.
+      li
+        p Wprowadzone zmiany wchodz&aogon; w &zdot;ycie w dniu publikacji Polityki Cookie.
+  include includes/footer.pug
+script(src='../scripts/app.js')
