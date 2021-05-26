@@ -1,0 +1,379 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 0 clamp(1.5em, 5vw, 3em);
+    transition: background-color 0.3s;
+    @include flex(row, space-between, center);
+    z-index: 10;
+
+    .burger {
+        z-index: 3;
+
+        & span {
+            display: block;
+            width: 2.5rem;
+            height: 3px;
+            margin-bottom: 0.3rem;
+            background-color: $contrast-color;
+            transition: 0.3s;
+        }
+
+        &--active>span {
+            background-color: white;
+        }
+
+        &--scrolled>.line1,
+        &--scrolled>.line2,
+        &--scrolled>.line3 {
+            background-color: white;
+        }
+
+        &--active>.line1 {
+            transform: rotate(45deg) translate(0.3rem, 0.3rem);
+        }
+
+        &--active>.line2 {
+            opacity: 0;
+        }
+
+        &--active>.line3 {
+            transform: rotate(-45deg) translate(0.55rem, -0.6rem);
+        }
+    }
+
+    @media screen and (min-width:960px) {
+        .burger {
+            display: none;
+        }
+    }
+
+    .hero-holder {
+        // margin-left: clamp(1.3em, 7vw, 6em);
+        margin-left: clamp(3.5em, 14vw, 7.25em);
+
+        &__hero {
+            display: block;
+            width: clamp(7rem, 10vw, 12rem);
+        }
+    }
+
+    @media screen and (min-width:960px) {
+        .hero-holder {
+            margin-left: unset;
+        }
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 30rem;
+        height: 100vh;
+        overflow-y: auto;
+        padding: clamp(3em, 12vh, 8em) 0;
+        transform: translateX(-100%);
+        background-color: $contrast-color;
+        z-index: 2;
+        transition: transform 0.3s;
+
+        &__list {
+            list-style: none;
+        }
+
+        &__item {
+            padding: 1em 0;
+        }
+
+        &__link {
+            margin: 0 clamp(0.1rem, 0.7vw, 2rem);
+            font-family: $main-font;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: clamp(1.4rem, 2vw, 1.6rem);
+            text-transform: uppercase;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .brands {
+            &>.menu__list {
+                margin-top: 1em;
+                display: none;
+                background-color: $contrast-color;
+
+                &--active {
+                    display: block;
+                }
+
+                .menu__item--small-pd {
+                    padding: 0.3em;
+                }
+
+                .menu__link--small {
+                    font-weight: 300;
+                    font-size: clamp(1rem, 1vw, 1.3rem);
+                }
+            }
+
+            &>.brands-link>i {
+                padding-left: 1rem;
+                transform: scaleY(1);
+                transform-origin: 50%, 50%;
+                transition: transform 0.3s;
+            }
+
+            &>.brands-link>i.rotate {
+                transform: scaleY(-1);
+            }
+        }
+
+        &--active {
+            transform: translateX(0);
+        }
+
+        @keyframes nav-links-show {
+            from {
+                opacity: 0;
+                transform: translateX(2rem);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+
+    @media screen and (min-width:960px) {
+        .menu {
+            padding: 0;
+            position: static;
+            height: auto;
+            overflow-y: unset;
+            transform: translateX(0);
+            background-color: transparent;
+
+            &__list {
+                display: flex;
+            }
+
+            &__item {
+                display: flex;
+                align-items: center;
+            }
+
+            &__link {
+                padding: 0 clamp(0.2rem, 0.3vw, 1.2rem);
+                line-height: 2;
+                width: 100%;
+                color: $contrast-color;
+                transform: translateX(0);
+                transition: color 0.3s;
+            }
+
+            &__link--scrolled {
+                color: white;
+            }
+
+            &__link:hover {
+                color: $accent-color;
+            }
+
+            .brands {
+                position: relative;
+
+                &-link {
+                    display: flex;
+                }
+
+                &-link i {
+                    align-self: center;
+                    padding-left: 0.5rem !important;
+                }
+
+                &:hover .menu__list {
+                    display: block;
+                    position: absolute;
+                    top: 100%;
+                    margin-top: 0;
+                    left: 0;
+                    width: 140%;
+                    background-color: #fff;
+                    border-left: 2px dotted $accent-color;
+                }
+
+                &:hover .menu__list--scrolled {
+                    background-color: $contrast-color;
+                }
+
+                &:hover>.menu__list .menu__link {
+                    width: auto;
+                    color: $contrast-color;
+                    transition: margin-left 0.2s;
+                }
+
+                &:hover>.menu__list--scrolled .menu__link {
+                    color: white;
+                }
+
+                &:hover>.menu__list .menu__link:hover {
+                    color: $accent-color;
+                    margin-left: 1.5em;
+                }
+            }
+        }
+
+    }
+
+    .utility-section {
+        display: flex;
+        @include flex;
+
+        &__search {
+            display: none;
+
+            &>i {
+                font-size: 2rem;
+                padding-right: 2rem;
+                color: $contrast-color !important;
+            }
+
+            &>.btn-search>i {
+                font-size: clamp(1.6rem, 4vw, 2rem);
+            }
+
+            &>.btn-search {
+                padding: 0.75rem clamp(1rem, 5vw, 1.5rem);
+                align-self: stretch;
+                background-color: $accent-color;
+                border: none;
+                color: white;
+                cursor: pointer;
+            }
+
+            &>.searchbar {
+                align-self: stretch;
+                padding: 0.5rem 1.5rem;
+                font-size: 1.5rem;
+                width: 50vw;
+                max-width: 80rem;
+                font-family: $secondary-font;
+                font-weight: 300;
+                letter-spacing: 0px;
+            }
+
+            &>.searchbar:focus {
+                border: 0.2rem solid $accent-color;
+                outline: none;
+            }
+        }
+
+        &__search--show {
+            display: flex;
+            @include flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: clamp(7rem, 22vh, 9rem);
+            padding: 1.5rem 2rem;
+            z-index: 99;
+            background-color: #fff;
+        }
+
+        &__search+i,
+        &__search>.btn-search>i {
+            transform: rotate(90deg);
+            cursor: pointer;
+        }
+
+        &__description {
+            font-size: clamp(1rem, 1vw, 1.5rem);
+            display: none;
+            font-family: $main-font;
+        }
+
+        &__link {
+            display: flex;
+            @include flex(column, center, center);
+            margin-right: clamp(0.75em, 3vw, 1.5rem);
+            color: $contrast-color;
+
+            &>a {
+                display: flex;
+                @include flex(column, center, center);
+                color: $contrast-color;
+                text-decoration: none;
+            }
+
+            &>i,
+            &>a>i {
+                margin-top: -.5em;
+                font-size: clamp(1.3rem, 2vw, 2rem);
+            }
+        }
+
+        &__link--scrolled,
+        &__link--scrolled>a {
+            color: white;
+        }
+
+        @media screen and (min-width:960px) {
+            &__search {
+                display: flex;
+
+                &>.searchbar {
+                    width: clamp(14rem, 15vw, 30rem);
+                }
+
+                &+i {
+                    display: none;
+                }
+
+                &>i {
+                    display: none;
+                }
+            }
+
+            &__description {
+                display: block;
+                padding-top: 0.3em;
+            }
+
+            &__link {
+
+                // margin-right: clamp(2remem, 3vw, rem);
+                // margin-right: 0.75rem;
+                // margin-right: 1vw;
+                &>a>i {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width:960px) {
+        .utility-section {
+            &__link {
+                margin-right: clamp(0.75em, 1.5vw, 2rem);
+            }
+        }
+    }
+}
+
+.header--scrolled {
+    background-color: $contrast-color;
+}
+
+@media screen and (min-width: 960px) {
+    .header {
+        padding: 0 clamp(1.5em, 5vw, 6em);
+    }
+}

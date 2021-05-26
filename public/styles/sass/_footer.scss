@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    @include flex(column, center, center);
+    background-color: $contrast-color;
+    font-family: $main-font;
+
+    & a {
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+
+    &__links {
+        display: flex;
+        @include flex(column, center, center);
+        margin-top: 3em;
+
+        & a {
+            margin: 0.5em 0;
+            font-size: clamp(0.9rem, 3vw, 1.6rem);
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &__links {
+            flex-direction: row;
+
+            & a {
+                margin: 0.5em 0.5em;
+            }
+        }
+    }
+
+    &__payments {
+        margin: 2em 0;
+
+        & .payments-list {
+            list-style: none;
+            display: flex;
+
+            & i {
+                font-size: clamp(2rem, 5vw, 3.5rem);
+                color: #b3b5b8;
+                padding: 0 0.2em;
+            }
+        }
+    }
+
+    &__copyright {
+        color: white;
+        font-family: $main-font;
+        font-weight: 300;
+        margin-bottom: 3em;
+        font-size: clamp(0.8rem, 1.8vw, 1.2rem);
+    }
+}
